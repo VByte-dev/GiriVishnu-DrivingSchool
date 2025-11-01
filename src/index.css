@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  background: white;
+  color: black;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "akira";
+  src: url("/fonts/Akira Expanded Demo.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "bricolage";
+  src: url("/fonts/BricolageGrotesque10pt-Bold-BF648bd578091b9.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "space";
+  src: url("/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+
+/* Running animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused; /* optional, for hover pause */
+}
+
+/* Pattern */
+.pattern {
+  /* Basic dimensions and centering */
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  /* Dark theme with brand accent */
+  background: #0b0b0b; /* deeper dark base */
+  background: linear-gradient(
+    135deg,
+    #0e1f16 25%,
+    /* dark green tint */ #10261b 25%,
+    #10261b 50%,
+    #0e1f16 50%,
+    #0e1f16 75%,
+    #10261b 75%,
+    #10261b
+  );
+  background-size: 40px 40px;
+
+  /* Subtle glow accent overlay using brand color */
+  box-shadow: inset 0 0 20px rgba(21, 171, 85, 0.05);
+
+  /* Animation */
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+/* Appear Animation */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+.appear {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry cover 40%;
+}
