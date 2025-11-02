@@ -61,7 +61,7 @@ const ClientTestimonial = () => {
   return (
     <section
       id="testimonials"
-      className="py-16 px-6 sm:py-20 sm:px-10 md:py-28 md:px-16 lg:px-32 bg-linear-to-t from-white via-[#f4fff9] to-[#EFFFF6]"
+      className="py-16 px-6 sm:py-20 sm:px-10 md:py-28 md:px-16 lg:px-32 bg-linear-to-t from-white via-[#ffffff] to-[#EFFFF6]"
       data-aos="fade-in"
       data-aos-duration="800"
     >
