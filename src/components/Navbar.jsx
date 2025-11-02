@@ -66,17 +66,17 @@ const Navbar = () => {
   return (
     <header
       id="home"
-      className="fixed w-full top-0 left-0 bg-white z-50 select-none shadow-sm"
+      className="fixed w-full top-0 left-0 bg-[#FCFCFC] z-50 select-none"
     >
       <nav className="container mx-auto flex items-center justify-between px-8 py-6">
         {/* Logo */}
 
         <div className="flex items-center gap-4">
-        <div className="flex-shrink-0">
+          <div className="flex-shrink-0">
             <img
               src="stocks/SLogo.jpg"
               alt="Driving School Logo"
-              className="w-10 sm:w-12 md:w-14 rounded-lg object-contain"
+              className="w-10 sm:w-12 md:w-14 object-contain"
             />
           </div>
           <div className="text-xs sm:text-sm md:text-base leading-tight">
@@ -130,7 +130,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="font-[space] w-full text-center md:hidden bg-white shadow-xl border-white motion-preset-slide-down motion-duration-100">
+        <div className="font-[space] w-full text-center md:hidden bg-[#FCFCFC] shadow-xl border-white motion-preset-slide-down motion-duration-100 ">
           <div className="flex flex-col space-y-4 px-6 py-4 font-medium text-gray-700">
             {navItems.map((item) => (
               <a
@@ -148,7 +148,7 @@ const Navbar = () => {
             ))}
             <hr className="border-zinc-300" />
 
-            <div className="bg-green-200">
+            <div className="">
               <a href="#services" className="w-full">
                 <button className="bg-gradient-to-r w-full from-[#15AB55] to-green-700 font-[space] flex items-center justify-between gap-2 text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300">
                   Get Started

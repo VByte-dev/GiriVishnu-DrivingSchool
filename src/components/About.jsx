@@ -133,7 +133,7 @@ const About = () => {
           data-aos-delay="400"
         >
           <a
-            href="#about"
+            href="#contact"
             className="bg-gradient-to-r from-[#15AB55] to-[#119249] flex gap-2 items-center text-white rounded px-4 py-2 md:px-5 md:py-2.5 transition-all duration-300 hover:from-[#119249] hover:to-[#0e7a3e]"
           >
             Learn More About Us

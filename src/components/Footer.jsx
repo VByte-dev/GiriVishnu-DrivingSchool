@@ -100,20 +100,23 @@ const Footer = () => {
       <div className="flex text-center flex-col md:flex-row items-center justify-between mt-10 text-sm font-[space] text-gray-400">
         <p>
           Copyright © {new Date().getFullYear()}{" "}
-          <span className="text-white">
-            GiriVishnu Driving School
-          </span>
-          . All Rights Reserved.
+          <span className="text-white">GiriVishnu Driving School</span>. All
+          Rights Reserved.
         </p>
 
         <div className="flex gap-4 mt-4 md:mt-0">
-          <a href="#" className="hover:text-[#15AB55] transition">
+          {/* <a href="#" className="hover:text-[#15AB55] transition">
             <i className="ri-linkedin-fill text-lg"></i>
           </a>
           <a href="#" className="hover:text-[#15AB55] transition">
             <i className="ri-facebook-fill text-lg"></i>
-          </a>
-          <a href="#" className="hover:text-[#15AB55] transition">
+          </a> */}
+          <a
+            href="https://www.instagram.com/gvdriving_academy_gpd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#15AB55] transition"
+          >
             <i className="ri-instagram-fill text-lg"></i>
           </a>
         </div>
