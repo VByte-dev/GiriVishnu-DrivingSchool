@@ -1,8 +1,8 @@
-// 🔸 Hero Section
+// Hero section component
 import React, { useEffect, useState, useCallback } from "react";
 
 const Hero = () => {
-  // Carousel
+  // Carousel state and config
   const [activeIndex, setActiveIndex] = useState(0);
   const images = [
     "/images/h1.jpg",
@@ -24,7 +24,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [handleNext]);
 
-  // Responsive Logo
+  // Responsive breakpoint state
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -40,7 +40,7 @@ const Hero = () => {
       id="hero"
       className="bg-[#effff6] mt-8 py-24 px-6 md:py-32 md:px-16 lg:px-32 flex flex-col md:flex-row items-center justify-between gap-10"
     >
-      {/* 🟢 Left Side - Text Content */}
+      {/* Left column: headings, copy, and CTAs */}
       <div
         className="max-w-xl text-left md:text-left"
         data-aos="fade-up"
@@ -80,7 +80,7 @@ const Hero = () => {
         >
           <a
             href="#services"
-            className="bg-gradient-to-r from-[#15AB55] to-green-700 flex gap-2 items-center text-white rounded px-4 py-2 md:px-5 md:py-2.5 font-[space] hover:bg-gradient-to-r hover:from-[#e85d00] hover:to-[#c74b00] transition-all duration-300"
+            className="bg-linear-to-r from-[#15AB55] to-green-700 flex gap-2 items-center text-white rounded px-4 py-2 md:px-5 md:py-2.5 font-[space] hover:bg-linear-to-r hover:from-[#e85d00] hover:to-[#c74b00] transition-all duration-300"
           >
             Book Your Lesson
             <i className="ri-arrow-right-line"></i>
@@ -96,21 +96,16 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 🟢 Right Side - Image Carousel */}
+      {/* Right column: image carousel */}
       <div
         className="w-full md:w-[45%] relative overflow-hidden rounded-2xl"
         data-aos="fade-up"
         data-aos-duration="800"
         data-aos-delay="200"
       >
-        {/* Carousel Container */}
+        {/* Carousel viewport and slides */}
         <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[450px]">
-          {[
-            "/images/h1.jpg",
-            "/images/h2.jpg",
-            "/images/h3.jpg",
-            "/images/h4.jpg",
-          ].map((src, index) => (
+          {images.map((src, index) => (
             <img
               key={index}
               src={src}
@@ -121,7 +116,7 @@ const Hero = () => {
             />
           ))}
 
-          {/* --- Navigation Buttons --- */}
+          {/* Navigation controls */}
           <button
             onClick={handlePrev}
             className="opacity-50 hover:opacity-100 active:opacity-100 absolute w-8 h-8 md:w-10 md:h-10 top-1/2 flex justify-center items-center left-3 -translate-y-1/2 bg-[#15AB55] text-white p-2 rounded-full hover:bg-[#129249] transition"
@@ -135,15 +130,9 @@ const Hero = () => {
             <i className="ri-arrow-right-s-line text-xl"></i>
           </button>
 
-          {/* --- Dots --- */}
+          {/* Slide indicators */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {[
-              "/images/h1.jpeg",
-              "/images/h2.jpeg",
-              "/images/h3.jpeg",
-              "/images/h4.jpeg",
-              "/images/h4.jpeg",
-            ].map((_, index) => (
+            {images.map((_, index) => (
               <div
                 key={index}
                 onClick={() => setActiveIndex(index)}

@@ -4,7 +4,7 @@ let Banner = () => {
   return (
     <>
       <div className="bg-[#0C1A0C] font-[bricolage] text-sm md:text-lg text-[#FFF9F4] overflow-hidden whitespace-nowrap py-8">
-        {/* Animation Container */}
+        {/* Marquee content container */}
         <div className="flex animate-marquee space-x-10">
           <h1 className="flex items-center">
             <span>
@@ -43,7 +43,7 @@ let Banner = () => {
             Confidence on Every Turn
           </h1>
 
-          {/* Duplicate for seamless animation */}
+          {/* Duplicated items for seamless loop */}
           <h1 className="flex items-center">
             <span>
               <i className="ri-asterisk text-[#15AB55] text-2xl md:text-3xl"></i>

@@ -8,13 +8,12 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Smooth scroll helper
+  // Smooth-scroll and hash sync
   const smoothScroll = (e, id) => {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
-      // update URL hash without reloading
       window.history.replaceState(null, "", `#${id}`);
       setActiveSection(id);
     } else {
@@ -23,7 +22,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  // Track section based on URL hash
+  // Track active section by scroll and hash
   useEffect(() => {
     const handleHashChange = () => {
       const currentHash = window.location.hash.replace("#", "") || "hero";
@@ -37,18 +36,16 @@ const Navbar = () => {
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        // detect if section top is above 50px and bottom is still visible
         if (rect.top <= 80 && rect.bottom >= 80) {
           current = section.id;
         }
       });
 
       setActiveSection(current);
-      // update the URL hash silently
       window.history.replaceState(null, "", `#${current}`);
     });
 
-    handleHashChange(); // run once initially
+    handleHashChange();
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
       window.removeEventListener("scroll", handleHashChange);
@@ -69,10 +66,9 @@ const Navbar = () => {
       className="fixed w-full top-0 left-0 bg-[#FCFCFC] z-50 select-none"
     >
       <nav className="container mx-auto flex items-center justify-between px-8 py-6">
-        {/* Logo */}
-
+        {/* Logo and brand */}
         <div className="flex items-center gap-4">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <img
               src="stocks/SLogo.jpg"
               alt="Driving School Logo"
@@ -89,7 +85,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop navigation */}
         <div className="hidden md:flex space-x-8 font-medium text-base font-[space]">
           {navItems.map((item) => (
             <a
@@ -107,10 +103,10 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* Desktop CTA */}
         <div className="hidden md:block">
           <a href="#services">
-            <button className="bg-gradient-to-r from-[#15AB55] to-green-700 font-[space] flex gap-2 items-center text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300">
+            <button className="bg-linear-to-r from-[#15AB55] to-green-700 font-[space] flex gap-2 items-center text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300">
               Get Started
               <span className="bg-white rounded-full text-green-700 w-6 h-6 flex items-center justify-center">
                 <i className="ri-arrow-right-line"></i>
@@ -119,7 +115,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile menu toggle */}
         <button
           onClick={toggleMenu}
           className="md:hidden flex items-center justify-center text-gray-700 text-2xl"
@@ -128,7 +124,7 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       {isOpen && (
         <div className="font-[space] w-full text-center md:hidden bg-[#FCFCFC] shadow-xl border-white motion-preset-slide-down motion-duration-100 ">
           <div className="flex flex-col space-y-4 px-6 py-4 font-medium text-gray-700">
@@ -150,7 +146,7 @@ const Navbar = () => {
 
             <div className="">
               <a href="#services" className="w-full">
-                <button className="bg-gradient-to-r w-full from-[#15AB55] to-green-700 font-[space] flex items-center justify-between gap-2 text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300">
+                <button className="bg-linear-to-r w-full from-[#15AB55] to-green-700 font-[space] flex items-center justify-between gap-2 text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300">
                   Get Started
                   <span className="bg-white rounded-full text-[#15AB55] w-6 h-6 flex items-center justify-center">
                     <i className="ri-arrow-right-line"></i>

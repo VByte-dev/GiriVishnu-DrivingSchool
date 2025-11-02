@@ -6,9 +6,9 @@ const Footer = () => {
       id="contact"
       className="bg-[#0C1A0C] text-gray-300 py-16 px-6 sm:px-10 md:px-16 lg:px-32"
     >
-      {/* Top Section */}
+      {/* Top: brand, links, and contact */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-700 pb-10">
-        {/* Left Section */}
+        {/* Brand copy */}
         <div>
           <h1 className="text-2xl font-[bricolage] font-semibold text-white">
             Giri<span className="text-[#15AB55]">Vishnu</span> Driving School
@@ -21,7 +21,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
+        {/* Quick links */}
         <div>
           <h3 className="text-white font-[bricolage] font-semibold mb-4">
             Quick Links
@@ -47,7 +47,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact */}
+        {/* Contact details */}
         <div>
           <h3 className="text-white font-[bricolage] font-semibold mb-4">
             Contact Info
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Bottom */}
+      {/* Bottom: copyright and socials */}
       <div className="flex text-center flex-col md:flex-row items-center justify-between mt-10 text-sm font-[space] text-gray-400">
         <p>
           Copyright © {new Date().getFullYear()}{" "}

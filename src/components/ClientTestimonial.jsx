@@ -1,4 +1,4 @@
-// 🟢 Driving School Testimonials Section
+// Testimonials section component
 import React, { useState, useEffect, useCallback } from "react";
 
 const ClientTestimonial = () => {
@@ -29,6 +29,7 @@ const ClientTestimonial = () => {
     },
   ];
 
+  // Carousel state and transitions
   const [activeIndex, setActiveIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
@@ -64,7 +65,7 @@ const ClientTestimonial = () => {
       data-aos="fade-in"
       data-aos-duration="800"
     >
-      {/* === Headings === */}
+      {/* Headings */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
           <h2 className="font-[bricolage] text-[#15AB55] text-sm sm:text-base md:text-lg tracking-wide">
@@ -87,7 +88,7 @@ const ClientTestimonial = () => {
         </div>
       </div>
 
-      {/* === Testimonial Card === */}
+      {/* Card with content and rating */}
       <div
         data-aos="fade-up"
         data-aos-delay="300"
@@ -137,7 +138,7 @@ const ClientTestimonial = () => {
           </div>
         </div>
 
-        {/* --- Navigation Arrows --- */}
+        {/* Navigation controls */}
         <div
           className="flex items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10"
           data-aos="zoom-in"
@@ -160,7 +161,7 @@ const ClientTestimonial = () => {
         </div>
       </div>
 
-      {/* --- Dots --- */}
+      {/* Slide indicators */}
       <div
         className="flex items-center justify-center mt-8 gap-2"
         data-aos="zoom-in"

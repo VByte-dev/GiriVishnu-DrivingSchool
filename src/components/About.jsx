@@ -1,4 +1,4 @@
-// 🔸 About Section
+// About section component
 import React from "react";
 
 const About = () => {
@@ -7,7 +7,7 @@ const About = () => {
       id="about"
       className="block md:grid grid-cols-2 place-items-center justify-between py-16 px-6 sm:py-20 sm:px-10 md:py-32 md:px-16 lg:px-32 gap-10"
     >
-      {/* 🟢 Left Side - Title & Image */}
+      {/* Left column: title and image */}
       <div
         className="text-center md:text-left"
         data-aos="fade-up"
@@ -39,7 +39,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* 🟢 Right Side - Description, Stats, Points, CTA */}
+      {/* Right column: description, highlights, CTA */}
       <div className="mt-10 md:mt-0" data-aos="fade-up" data-aos-duration="800">
         <p
           className="font-[space] text-xs sm:text-sm md:text-base leading-relaxed text-center md:text-left mb-10 text-gray-700"
@@ -126,7 +126,7 @@ const About = () => {
           ))}
         </div>
 
-        {/* CTA Buttons */}
+        {/* Calls to action */}
         <div
           className="flex flex-col sm:flex-row gap-6 mt-10 font-[space] items-center justify-center md:justify-start text-xs sm:text-sm md:text-base"
           data-aos="fade-up"
