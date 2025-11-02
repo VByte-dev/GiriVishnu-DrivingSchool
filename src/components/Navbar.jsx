@@ -146,7 +146,7 @@ const Navbar = () => {
 
             <div className="">
               <a href="#services" className="w-full">
-                <button className="bg-linear-to-r w-full from-[#15AB55] to-green-700 font-[space] flex items-center justify-between gap-2 text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300">
+                <button className="bg-linear-to-r w-full from-[#15AB55] to-green-700 font-[space] flex items-center justify-between gap-2 text-white px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300" onClick={toggleMenu}>
                   Get Started
                   <span className="bg-white rounded-full text-[#15AB55] w-6 h-6 flex items-center justify-center">
                     <i className="ri-arrow-right-line"></i>
